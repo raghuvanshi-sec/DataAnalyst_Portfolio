@@ -1,104 +1,333 @@
-# Satyam Raghuvanshi — Portfolio
+# Satyam Raghuvanshi — Data Analyst Portfolio
 
-React + Vite portfolio site. The single HTML file has been split into components,
-per-component stylesheets, and a central content file.
+> A modern, data-driven personal portfolio showcasing analytics, business intelligence, machine learning, and applied AI projects.
 
-## Run it
+**Live Portfolio:** _Add your deployed Vercel URL here_  
+**GitHub:** https://github.com/raghuvanshi-sec  
+**LinkedIn:** https://linkedin.com/in/satyam-0x
+
+---
+
+## About
+
+I’m **Satyam Raghuvanshi**, a Computer Science & Engineering student and aspiring Data Analyst based in Bhopal, India.
+
+I work across the analytics lifecycle — from **data cleaning and exploratory analysis** to **business intelligence, machine learning, explainable AI, and decision-oriented reporting**.
+
+### Core toolkit
+
+- **Python** — Pandas, NumPy, Scikit-learn
+- **SQL** — querying, transformation, and analytical workflows
+- **Power BI** — dashboards, reporting, and business insights
+- **Excel** — analysis, reporting, and data preparation
+- **Machine Learning** — XGBoost, classification, model interpretation
+- **Explainable AI** — SHAP
+- **NLP & Computer Vision**
+- **Git & GitHub**
+
+---
+
+## Portfolio Overview
+
+The portfolio is a component-based React application with a centralized content layer. It presents capabilities, selected projects, experience, education, and contact information through an interactive, responsive interface.
+
+### Application flow
+
+```mermaid
+flowchart TD
+    A[Visitor] --> B[Hero]
+    B --> C[Capabilities]
+    C --> D[Projects]
+    D --> E[Project Details Modal]
+    E --> F[GitHub / External Links]
+    D --> G[About]
+    G --> H[Experience & Education]
+    H --> I[Contact]
+    I --> J[LinkedIn / GitHub / Email]
+```
+
+---
+
+## Architecture
+
+Presentation, content, styling, and utility logic are separated for maintainability.
+
+```mermaid
+flowchart LR
+    A[index.html] --> B[src/main.jsx]
+    B --> C[App.jsx]
+
+    C --> D[Components]
+    D --> D1[Navbar]
+    D --> D2[Hero]
+    D --> D3[Capabilities]
+    D --> D4[Projects]
+    D --> D5[About]
+    D --> D6[Experience]
+    D --> D7[Contact]
+    D --> D8[Footer]
+
+    C --> E[Central Content]
+    E --> E1[data/content.js]
+
+    D --> F[Styles]
+    F --> F1[Design Tokens]
+    F --> F2[Global Styles]
+    F --> F3[Component Styles]
+
+    D --> G[Utilities]
+    G --> G1[countUp.js]
+    G --> G2[visualReveal.js]
+    G --> G3[useScrollRail.js]
+
+    D2 --> H[Three.js Hero]
+    D4 --> I[Project Visuals]
+    D4 --> J[Project Modal]
+```
+
+---
+
+## Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 18 |
+| Build Tool | Vite 5 |
+| Visualization | Three.js |
+| Language | JavaScript / JSX |
+| Styling | Modular CSS |
+| Data Layer | Centralized JavaScript content model |
+| Version Control | Git + GitHub |
+| Deployment | Vercel-ready |
+
+---
+
+## Featured Projects
+
+### Riskora
+**AI-powered payment risk & fraud decisioning**
+
+Combines **XGBoost, rule-based logic, and SHAP** to score transactions and explain the factors behind risk decisions.
+
+**Focus:** Fraud detection · Risk scoring · Explainable AI  
+**Stack:** Python · XGBoost · SHAP
+
+### Sentient Retention Engine
+**Agentic AI for SaaS churn prevention**
+
+Combines **machine learning, autonomous decision-making agents, and digital-twin simulations** to predict and prevent customer churn.
+
+**Focus:** Churn prediction · Agentic AI · Simulation  
+**Stack:** Python · Agentic AI · Simulation
+
+### PhishGuard
+**Machine-learning phishing detection**
+
+Analyzes **language and link patterns**, combining XGBoost, NLP, and computer vision techniques.
+
+**Focus:** Classification · NLP · Cybersecurity  
+**Stack:** XGBoost · NLP · Computer Vision
+
+### Data Analyst Job Simulation
+**From raw sales data to an executive recommendation**
+
+A practical analytics workflow covering a **5,150-row sales dataset**, data cleaning, validation, revenue analysis, month-on-month growth, channel analysis, and business recommendations.
+
+The cleaned workflow produced **4,820 analysis-ready records**.
+
+**Focus:** Data cleaning · Business analysis · Reporting  
+**Stack:** Python · Pandas · Power BI
+
+---
+
+## Data-to-Decision Workflow
+
+```mermaid
+flowchart LR
+    A[Raw Data] --> B[Data Cleaning]
+    B --> C[Validation]
+    C --> D[Exploratory Analysis]
+    D --> E[Visualization]
+    E --> F[Business Insights]
+    F --> G[Decision / Recommendation]
+
+    D -. Optional .-> H[Machine Learning]
+    H --> I[Model Interpretation]
+    I --> F
+```
+
+---
+
+## Project Interaction
+
+```mermaid
+sequenceDiagram
+    participant V as Visitor
+    participant P as Project Card
+    participant M as Project Modal
+    participant G as GitHub
+
+    V->>P: Select project
+    P->>M: Open project details
+    M-->>V: Show description, stack & outcomes
+    V->>G: Open repository
+    G-->>V: Project source
+```
+
+---
+
+## Repository Structure
+
+```text
+DataAnalyst_Portfolio/
+│
+├── README.md
+│
+└── satyam-portfolio/
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    ├── vite.config.js
+    │
+    ├── public/
+    │   ├── satyam.jpg
+    │   └── Satyam_Raghuvanshi_Resume.pdf
+    │
+    └── src/
+        ├── App.jsx
+        ├── main.jsx
+        ├── assets/
+        │   └── satyam.jpg
+        ├── components/
+        │   ├── Navbar.jsx
+        │   ├── Hero.jsx
+        │   ├── HeroCanvas.jsx
+        │   ├── Marquee.jsx
+        │   ├── Capabilities.jsx
+        │   ├── Projects.jsx
+        │   ├── ProjectVisual.jsx
+        │   ├── ProjectModal.jsx
+        │   ├── About.jsx
+        │   ├── Experience.jsx
+        │   └── Contact.jsx
+        ├── data/
+        │   └── content.js
+        ├── hooks/
+        │   └── useScrollRail.js
+        ├── utils/
+        │   ├── countUp.js
+        │   └── visualReveal.js
+        └── styles/
+            ├── variables.css
+            ├── global.css
+            └── component stylesheets
+```
+
+---
+
+## Local Development
 
 ```bash
+git clone https://github.com/raghuvanshi-sec/DataAnalyst_Portfolio.git
+cd DataAnalyst_Portfolio/satyam-portfolio
 npm install
-npm run dev      # local dev server
-npm run build    # production build into dist/
-npm run preview  # preview the production build
+npm run dev
 ```
 
-## Structure
+Production build:
 
-```
-portfolio/
-├── index.html                 # Vite entry HTML (fonts + #root)
-├── package.json
-├── vite.config.js
-├── public/                    # copied as-is into the build
-│   ├── satyam.jpg             # portrait used in the About section
-│   └── Satyam_Raghuvanshi_Resume.pdf
-└── src/
-    ├── main.jsx               # React entry, imports global CSS
-    ├── App.jsx                # section composition order
-    ├── data/
-    │   └── content.js         # ALL site copy — edit here, not in JSX
-    ├── hooks/
-    │   └── useScrollRail.js   # drives the Experience timeline's scroll-fill line
-    ├── utils/
-    │   ├── visualReveal.js    # draws in project chart SVGs on scroll/modal-open
-    │   └── countUp.js         # animates About's stat numbers up on first view
-    ├── components/
-    │   ├── Navbar.jsx
-    │   ├── Hero.jsx
-    │   ├── HeroCanvas.jsx     # Three.js wireframe, isolated + guarded
-    │   ├── Marquee.jsx
-    │   ├── Capabilities.jsx
-    │   ├── Projects.jsx
-    │   ├── ProjectVisual.jsx  # SVG stand-ins for project cards
-    │   ├── ProjectModal.jsx   # click-through details dialog per project
-    │   ├── About.jsx
-    │   ├── Experience.jsx
-    │   ├── Contact.jsx
-    │   └── Footer.jsx
-    └── styles/
-        ├── variables.css      # design tokens (colors, fonts, layout)
-        ├── global.css         # resets + shared primitives + .viz-* animation rules
-        ├── Navbar.css
-        ├── Hero.css
-        ├── Marquee.css
-        ├── Capabilities.css
-        ├── Projects.css
-        ├── ProjectModal.css
-        ├── About.css
-        ├── Experience.css
-        ├── Contact.css
-        └── Footer.css
+```bash
+npm run build
+npm run preview
 ```
 
-## Where to change things
+---
 
-| Want to change…            | Edit                                    |
-| -------------------------- | --------------------------------------- |
-| Any text, links, job dates | `src/data/content.js`                   |
-| Colors, fonts, spacing     | `src/styles/variables.css`              |
-| A section's layout         | that section's `.css` in `src/styles/`  |
-| Section order              | `src/App.jsx`                           |
-| Portrait photo             | replace `public/satyam.jpg`             |
-| Resume PDF                 | replace `public/Satyam_..._Resume.pdf`  |
+## Content Management
 
-## Notes
+Most portfolio content is centralized in:
 
-- **GitHub links are real.** Each project's `github` field in
-  `src/data/content.js` points at its actual repo (Riskora, Sentient
-  Retention Engine, PhishGuard, and the Job Simulation's UrbanKart repo).
-  Set a project's `github` to `null` to hide the button if you ever add one
-  without a public repo.
-- **Click a project card to see the full write-up.** `ProjectModal.jsx` shows
-  the fuller description, "what I did" bullets, and GitHub / email links.
-  Closes on Escape, backdrop click, or the × button, and restores focus to
-  whichever card opened it.
-- **Data-themed reveal animations** run through the page, each contained
-  within its own element so nothing overlaps the layout:
-  - Project chart visuals (gauge, line, rows, bars) draw themselves in the
-    first time a card scrolls into view, and again whenever its modal opens.
-    Driven by `src/utils/visualReveal.js` + the `.viz-*` classes in
-    `global.css`; safe to delete if you swap a visual for a real screenshot.
-  - The Capabilities grid gets a single lime scan-line sweep on first view
-    (`Capabilities.jsx` + `.cap__scan`).
-  - The About stats fade in and count up to their final value on first view
-    (`src/utils/countUp.js`). Values with a non-digit prefix (like the
-    graduation year) just fade in — counting up "'27" made no sense.
-  - Everything respects `prefers-reduced-motion` — animations are skipped
-    and elements just appear in their final state.
-- **Project images** — `ProjectVisual.jsx` renders abstract SVG stand-ins. Swap any
-  for a real screenshot: `<img className="proj__visual" src="/shot.png" alt="" />`.
-- **Hero animation** — `HeroCanvas.jsx` checks for WebGL support and wraps setup in
-  try/catch, so the page still works if WebGL is unavailable. It also cancels its
-  animation frame and disposes geometries on unmount.
-- **Bundle size** — Three.js makes the JS chunk ~627 kB. If that matters, lazy-load
-  `HeroCanvas` with `React.lazy()` so it loads after first paint.
+```text
+src/data/content.js
+```
+
+It controls profile information, navigation, skills, capabilities, projects, project links, statistics, experience, and education.
+
+This keeps React components focused primarily on presentation.
+
+---
+
+## Design & UX
+
+- Responsive layout
+- Component-based architecture
+- Data-inspired visual language
+- Interactive project cards
+- Project detail modals
+- Animated statistics
+- Scroll-based visual reveals
+- Three.js hero visualization
+- Reduced-motion support
+- Clear navigation and external project links
+
+---
+
+## Performance & Accessibility
+
+- Respects `prefers-reduced-motion`
+- Guards Three.js/WebGL initialization
+- Uses viewport-based animation triggers
+- Cleans up animation resources on unmount
+- Keeps project details accessible without leaving the portfolio
+
+---
+
+## Deployment
+
+The project is ready for Vercel or another Vite-compatible host.
+
+For Vercel:
+
+```text
+Root Directory: satyam-portfolio
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+```
+
+---
+
+## Roadmap
+
+```mermaid
+flowchart LR
+    A[Current Portfolio] --> B[Live Analytics Dashboards]
+    B --> C[Case Study Pages]
+    C --> D[Interactive Data Visualizations]
+    D --> E[Project Metrics]
+    E --> F[Analytics Blog / Insights]
+```
+
+---
+
+## Contact
+
+**Satyam Raghuvanshi**  
+Aspiring Data Analyst · B.Tech CSE 2027  
+Bhopal, India
+
+- GitHub: https://github.com/raghuvanshi-sec
+- LinkedIn: https://linkedin.com/in/satyam-0x
+- Email: satyamraghuvanshi220ct@gmail.com
+
+---
+
+## License
+
+This portfolio is a personal project. The source is available for reference and learning; please do not present the work or content as your own.
+
+---
+
+<p align="center">
+  Built with React, Vite, Three.js, curiosity, and a data-first mindset.
+</p>
