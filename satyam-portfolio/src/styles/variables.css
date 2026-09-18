@@ -1,0 +1,31 @@
+/* Design tokens — single source of truth for the whole site */
+:root {
+  /* surfaces */
+  --bg: #050506;
+  --bg-elev: #0d0e10;
+  --bg-elev-2: #17181b;
+
+  /* type */
+  --ink: #f4f4f1;
+  --muted: #9a9da4;
+  --muted-dim: #686b71;
+
+  /* accent */
+  --lime: #d9ff3e;
+  --lime-hover: #c7ee2c;
+  --lime-dim: #5b6321;
+  --on-lime: #0e1000;
+
+  /* lines */
+  --line: rgba(244, 244, 241, 0.09);
+  --line-strong: rgba(244, 244, 241, 0.18);
+
+  /* layout */
+  --maxw: 1160px;
+  --gutter: 28px;
+
+  /* fonts */
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

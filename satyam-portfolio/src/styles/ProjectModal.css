@@ -1,0 +1,132 @@
+.proj-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(5, 5, 6, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  animation: proj-modal-fade 0.2s ease;
+}
+
+@keyframes proj-modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.proj-modal {
+  background: var(--bg-elev);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: proj-modal-rise 0.2s ease;
+}
+
+@keyframes proj-modal-rise {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.proj-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(5, 5, 6, 0.6);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.proj-modal__close:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.proj-modal__visual {
+  width: 100%;
+  background: var(--bg-elev-2);
+}
+
+.proj-modal__body {
+  padding: 26px 28px 30px;
+}
+
+.proj-modal__meta {
+  font-size: 12px;
+  color: var(--lime);
+  margin: 0 0 10px;
+}
+
+.proj-modal__title {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.proj-modal__desc p {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin: 0 0 12px;
+}
+
+.proj-modal__bullets {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.proj-modal__bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+.proj-modal__bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--lime);
+  font-size: 11px;
+  top: 2px;
+}
+
+.proj-modal__actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .proj-modal-backdrop {
+    padding: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proj-modal-backdrop,
+  .proj-modal {
+    animation: none;
+  }
+}

@@ -1,0 +1,92 @@
+.proj__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.proj__card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.proj__card:hover,
+.proj__card:focus-visible {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+}
+
+.proj__visual {
+  width: 100%;
+  display: block;
+  background: var(--bg-elev-2);
+}
+
+.proj__body {
+  padding: 22px 24px 26px;
+}
+
+.proj__name {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.proj__desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+
+.proj__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.proj__tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--lime);
+  border: 1px solid var(--line-strong);
+  padding: 4px 9px;
+  border-radius: 4px;
+}
+
+.proj__foot {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proj__open-hint {
+  font-size: 12px;
+  color: var(--muted-dim);
+}
+
+.proj__github-link {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.proj__github-link:hover {
+  color: var(--lime);
+}
+
+@media (max-width: 860px) {
+  .proj__grid {
+    grid-template-columns: 1fr;
+  }
+}
