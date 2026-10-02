@@ -155,7 +155,7 @@ export const projects = [
 export const stats = [
   { num: '3', label: 'Projects Built' },
   { num: '1', label: 'Internship' },
-  { num: '7.20', label: 'CGPA' },
+  { num: '7.43', label: 'CGPA' },
   { num: '’27', label: 'Graduating' },
 ];
 
@@ -221,9 +221,9 @@ export const experience = [
     loc: 'Bhopal, India',
     role: 'B.Tech, Computer Science & Engineering',
     bullets: [
-      'Pursuing a B.Tech in Computer Science & Engineering, currently maintaining a 7.20/10 CGPA.',
+      'Pursuing a B.Tech in Computer Science & Engineering, currently maintaining a 7.43/10 CGPA.',
       'Coursework spanning data structures, algorithms, databases, and applied statistics — the foundation behind every project above.',
     ],
-    tags: ['B.Tech CSE', 'CGPA 7.20'],
+    tags: ['B.Tech CSE', 'CGPA 7.43'],
   },
 ];
